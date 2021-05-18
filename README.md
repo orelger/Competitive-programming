@@ -1,5 +1,10 @@
-Competitive-programming
+#Competitive-programming
 
-Some of my solutions to CS Academy and HackerRank problems
+Some of my solutions to CSAcademy and HackerRank problems
 
-feel free to use them
+
+
+
+
+###----------------------------------------------
+Feel free to take my scripts and learn from them
