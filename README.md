@@ -1,4 +1,4 @@
-# orelger-Competitive-programming
+Competitive-programming
 
 Some of my solutions to CS Academy and HackerRank problems
 
