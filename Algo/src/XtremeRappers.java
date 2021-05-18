@@ -18,11 +18,11 @@ public class XtremeRappers {
         max = Math.max(j, k);
         min = Math.min(j, k);
 
-        //First case: if min num is 0
+        //First case: if min num is zero, there are zero options
         if (min == 0)
             System.out.println(0);
         else if (max >= 2 * min)
-            //Second case: there are min options becase the max is bigger than min in 2 mul
+            //Second case: if max is bigger than min by mul 2, there are min options
             System.out.println(min);
         else
             System.out.println((max + min) / 3);
