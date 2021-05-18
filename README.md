@@ -1,3 +1,5 @@
 # orelger-Competitive-programming
 
-Solutions to CS Academy an HackerRank problems
+Some of my solutions to CS Academy and HackerRank problems
+
+feel free to use them
