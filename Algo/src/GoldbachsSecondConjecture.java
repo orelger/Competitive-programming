@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Author: Orel Gershonovich
- * Date: 1.5.21
+ * Release: 1.5.21
  */
 
 public class GoldbachsSecondConjecture {

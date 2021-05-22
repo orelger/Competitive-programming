@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Author: Orel Gershonovich
- * Date: 12.5.21
+ * Release: 12.5.21
  */
 
 public class XtremeRappers {

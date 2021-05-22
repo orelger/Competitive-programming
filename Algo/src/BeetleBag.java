@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Author: Orel Gershonovich
- * Date: 9.4.21
+ * Release: 9.4.21
  */
 
 public class BeetleBag {

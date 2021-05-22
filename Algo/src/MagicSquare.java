@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Author: Orel Gershonovich
- * Date: 5.3.21
+ * Release: 5.3.21
  */
 
 public class MagicSquare {

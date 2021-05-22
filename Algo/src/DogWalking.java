@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /**
  * Author: Orel Gershonovich
- * Date: 28.4.21
+ * Release: 28.4.21
  */
 
 public class DogWalking {
