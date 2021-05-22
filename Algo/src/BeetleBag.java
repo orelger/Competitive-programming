@@ -40,7 +40,7 @@ public class BeetleBag {
     private static int knapsackProblemDynamic(int[] weight, int[] power, int capacity, int numberGadgets) {
         int[][] m = new int[numberGadgets][capacity + 1];
 
-        //Fill first col in 0 because the weight is 0
+        //Fill first col in zero because the weight is zero
         for (int i = 0; i < numberGadgets; i++) {
             m[i][0] = 0;
         }
