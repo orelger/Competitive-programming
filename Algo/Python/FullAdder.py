@@ -3,6 +3,7 @@ Author: Orel Gershonovich
 Release: 31/3/21
 '''
 
+
 def calB(a, b, base, key, val):
     carry = 0
     sumB = ""
@@ -24,7 +25,6 @@ def calB(a, b, base, key, val):
             numx = b[i]
             y = val[numx]
 
-
         curr = carry + x + y
 
         # Update carry
@@ -42,6 +42,7 @@ def calB(a, b, base, key, val):
         sumB += z
 
     return sumB[::-1]
+
 
 if __name__ == "__main__":
     b, letters = input().split()
@@ -63,14 +64,13 @@ if __name__ == "__main__":
 
     # Padding 0 in front of the
     # number to make both numbers equal
-    for i in range(1, diff+1):
+    for i in range(1, diff + 1):
         s += " "
 
     if num1.__len__() < num2.__len__():
         num1 = s + num1
     else:
         num2 = s + num2
-
 
     sum = calB(num1, num2, b, my_dict, my_dict2)
 
@@ -82,4 +82,4 @@ if __name__ == "__main__":
     print(realNum1)
     print(realNum2)
     print(dash)
-    print (sum)
+    print(sum)
