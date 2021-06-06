@@ -2,10 +2,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Author: Orel Gershonovich
- * Release: 28.4.21
+ * A solution for Dog walking - IEEEXtreme 11.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.csacademy.com/">https://www.csacademy.com/</a>
+ * @since: 28.4.21
  */
-
 public class DogWalking {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -29,11 +31,14 @@ public class DogWalking {
             //Sorting the dogs array
             Arrays.sort(dogs);
 
-            if (k == 1)
+            if (k == 1) {
+                // There is only one dog walker so we compute the biggest num sub the lowest num
                 sum[i] = dogs[dogs.length - 1] - dogs[0];
-            else if (k == n)
+            } else if (k == n) {
+                // The range of a group consisting of a single dog is 00
                 sum[i] = 0;
-            else {
+            } else {
+                // There are n dog walkers
                 int sumDiff = 0;
                 int sub = sum[i] = dogs[dogs.length - 1] - dogs[0];
                 diff = new int[n - 1];

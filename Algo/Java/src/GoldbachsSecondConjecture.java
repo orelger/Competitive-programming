@@ -3,16 +3,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Author: Orel Gershonovich
- * Release: 1.5.21
+ * A solution for Goldbach's Second Conjecture - Xtreme 10.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.hackerrank.com/">https://www.hackerrank.com/</a>
+ * @since: 1.5.21
  */
-
 public class GoldbachsSecondConjecture {
     public static BigInteger firstPrimeNum;
-    public static BigInteger second;
-    public static int MAX = 1000;
+    public static BigInteger secondPrimeNum;
+    public static final int MAX = 1000;
 
-    // Array to store all prime less
+    // Array to store all prime numbers
     public static ArrayList<Long> primes = new ArrayList<>();
 
     public static void main(String[] args) {
@@ -24,16 +26,25 @@ public class GoldbachsSecondConjecture {
         BigInteger num = sc.nextBigInteger();
         firstPrimeNum = num;
 
-        //Chose 5000 because less than 4000 some checks was failed
+
+        // Choose 5000 because less than 4000 some checks was failed.
         while (i < 5000 && !finished) {
+            // Because i'm base on Goldbach's conjecture that says:
+            // Every even whole number greater than 2 is the sum of two prime numbers.
+            // I'm looking for the second number because if i take the first one we can get an error in the computing
+            // 3 prime numbers of little prime number like (7,11 and etc)
             firstPrimeNum = firstPrimeNum.subtract(BigInteger.ONE);
             isPrime = firstPrimeNum.isProbablePrime(1);
+
             if (isPrime) {
-                second = firstPrimeNum;
+                secondPrimeNum = firstPrimeNum;
                 while (j < 5000) {
-                    second = second.subtract(BigInteger.ONE);
-                    if (second.isProbablePrime(1)) {
-                        twoPrimeNumbers(num.subtract(second).intValue(), second.toString(10));
+                    secondPrimeNum = secondPrimeNum.subtract(BigInteger.ONE);
+                    if (secondPrimeNum.isProbablePrime(1)) {
+                        // num.subtract(secondPrimeNum).intValue() - ensures greater than 2
+                        // e.g 7-3=4 -> 3,2,2
+                        // e.g 11-5=6 -> 5,3,3
+                        twoPrimeNumbers(num.subtract(secondPrimeNum).intValue(), secondPrimeNum.toString(10));
                         finished = true;
                         break;
                     }

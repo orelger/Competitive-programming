@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
 /**
- * Author: Orel Gershonovich
- * Release: 9.4.21
+ * A solution for BeetleBag - IEEEXtreme 11.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.csacademy.com/">https://www.csacademy.com/</a>
+ * @since: 9.4.21
  */
-
 public class BeetleBag {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -28,6 +30,7 @@ public class BeetleBag {
             }
 
             //sum[i] = knapsackProblemRec(weight, power, capacity, numberGadgets);
+            // https://www.youtube.com/watch?v=8LusJS5-AGo&t=314s&ab_channel=IntelliJIDEAbyJetBrainsIntelliJIDEAbyJetBrains
             sum[i] = knapsackProblemDynamic(weight, power, capacity, numberGadgets);
         }
 

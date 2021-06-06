@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Author: Orel Gershonovich
- * Release: 5.3.21
+ * A solution for Magic Squar - Xtreme 8.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.hackerrank.com/">https://www.hackerrank.com/</a>
+ * @since: 5.3.21
  */
-
 public class MagicSquare {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

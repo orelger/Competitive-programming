@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
 /**
- * Author: Orel Gershonovich
- * Release: 2.5.21
+ * A solution for Always Be In Control - Xtreme 10.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.hackerrank.com/">https://www.hackerrank.com/</a>
+ * @since: : 2.5.21
  */
-
 public class AlwaysBeInControl {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -14,8 +16,10 @@ public class AlwaysBeInControl {
         int tests = sc.nextInt();
 
         for (int i = 0; i < tests; i++) {
-            //System.out.println("Please give me the number of data and the number of elements in a subgroup: ");
+            // A variable for representing "outcontrol" if any of the four limitation are occurred
             boolean inControl = true;
+
+            //System.out.println("Please give me the number of data and the number of elements in a subgroup: ");
             int data = sc.nextInt();
             int elementsInSubgroup = sc.nextInt();
             int[] dataArr = new int[data];
@@ -30,6 +34,7 @@ public class AlwaysBeInControl {
             double[] avg;
             int[] range;
 
+            // Creating arrays according to the required size
             if ((data % elementsInSubgroup) == 0) {
                 avg = new double[(data / elementsInSubgroup)];
                 range = new int[(data / elementsInSubgroup)];
@@ -63,20 +68,20 @@ public class AlwaysBeInControl {
                     if (j != dataArr.length - 1)
                         runner++;
                 } else {
-                    //Init the runner to one for second/third/etc sub array
+                    // Init the runner to the next subgroup
                     runner = 1;
                     avg[avgIndex++] = (sum + dataArr[j]) / elementsInSubgroup;
 
                     //Check if the last item in sub array is the max or min
                     if (dataArr[j] > max)
                         max = dataArr[j];
-
                     if (dataArr[j] < min)
                         min = dataArr[j];
 
                     range[rangeIndex++] = max - min;
                     sum = 0;
                     if (j != dataArr.length - 1) {
+                        //Init the max and min for the next subgroup
                         max = dataArr[j + 1];
                         min = dataArr[j + 1];
                     }
