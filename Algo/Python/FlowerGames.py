@@ -1,7 +1,10 @@
-'''
+"""
+A solution for Flower games - Xtreme 10.0
+
 Author: Orel Gershonovich
-Release: 21/3/21
-'''
+See: https://www.hackerrank.com/
+Since: 21/3/21
+"""
 
 if __name__ == "__main__":
     T = 0
@@ -17,7 +20,8 @@ if __name__ == "__main__":
             X //= 2
             P += 1
 
-        P -= 1  # decrease in 1 because we need the lower val of the log
+        # decrease in 1 because we need the lower val of the log
+        P -= 1
 
         # if pow(2, p) == N print 1
         if 2 ** P == N:
@@ -26,6 +30,7 @@ if __name__ == "__main__":
             # sub K from N and mul in 2 because is jumping in constant 2
             N = N - (2 ** P)
             N = N * 2
-            print(N + 1)  # print + 1 because mul in 2 is even and we need the odd num
+            # print + 1 because mul in 2 is even and we need the odd num
+            print(N + 1)
 
         P = 0

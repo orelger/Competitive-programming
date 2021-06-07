@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * A solution for Magic Squar - Xtreme 8.0
+ * A solution for Magic Square - Xtreme 8.0
  *
  * @author: Orel Gershonovich
  * @see: <a href="https://www.hackerrank.com/">https://www.hackerrank.com/</a>

@@ -2,8 +2,11 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
- * Author: Orel Gershonovich
- * Release: 25.4.21
+ * A solution for Running up stairs - IEEEXtreme 11.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.csacademy.com/">https://www.csacademy.com/</a>
+ * @since: 25.4.21
  */
 
 public class RunningUpStairs {

@@ -1,8 +1,11 @@
 import java.util.Scanner;
 
 /**
- * Author: Orel Gershonovich
- * Release: 19.4.21
+ * A solution for Rumour - IEEEXtreme 11.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.csacademy.com/">https://www.csacademy.com/</a>
+ * @since: 19.4.21
  */
 
 public class Rumour {
@@ -11,9 +14,9 @@ public class Rumour {
         //System.out.println("Give me the length of the tree: ");
         int length = sc.nextInt();
         long firstNum, secondNum;
-        int [] sum = new int[length];
+        int[] sum = new int[length];
         int dist, son;
-        boolean log =false;
+        boolean log = false;
         long min, max;
 
         for (int i = 0; i < length; i++) {
@@ -24,6 +27,7 @@ public class Rumour {
             firstNum = sc.nextLong();
             //System.out.println("Give me second num:");
             secondNum = sc.nextLong();
+            // The min num always will be the father's max
             min = Math.min(firstNum, secondNum);
             max = Math.max(firstNum, secondNum);
             while ((min != max) && (min * 2 != max) && ((min * 2) + 1 != max)) {
@@ -44,15 +48,20 @@ public class Rumour {
                 dist += 2;
             }
 
-            if (min == max)
+            if (min == max) {
                 sum[i] = dist;
-            else if ((min * 2 == max) || ((min * 2) + 1 == max) && !log)
+            } else if ((min * 2 == max) || ((min * 2) + 1 == max) && !log) {
+                // Father and son
+                // !log - because already compute in son function
                 sum[i] = dist + 1;
-            else if(((min +1) == max) && !log)
+            } else if (((min + 1) == max) && !log) {
+                // same level in the tree
+                // !log - because already compute in son function
                 sum[i] = dist + 2;
+            }
         }
 
-        for (int i: sum) {
+        for (int i : sum) {
             System.out.println(i);
         }
     }
@@ -60,15 +69,16 @@ public class Rumour {
     /**
      * Getting 2 nodes(Min and max)
      * Checks if min is a father of max
+     *
      * @param min - father
      * @param max - son
      * @return 0 - is not a child
-     *         mul of 2
+     * mul of 2
      */
     private static int isSon(long min, long max) {
         int counter = 1;
-        while(max >= min){
-            if(max <= (min + counter - 1)) {
+        while (max >= min) {
+            if (max <= (min + counter - 1)) {
                 //Ensure max number is lower than the max real value of the sun
                 return counter;
             }

@@ -1,8 +1,11 @@
 import java.util.Scanner;
 
 /**
- * Author: Orel Gershonovich
- * Release: 12.5.21
+ * A solution for Xtreme rappers - IEEEXtreme 13.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.csacademy.com/">https://www.csacademy.com/</a>
+ * @since: 12.5.21
  */
 
 public class XtremeRappers {
@@ -18,14 +21,14 @@ public class XtremeRappers {
         max = Math.max(j, k);
         min = Math.min(j, k);
 
-        //First case: if min num is zero, there are zero options
-        if (min == 0)
+        if (min == 0) {
+            //First case: if min num is zero, there are zero options
             System.out.println(0);
-        else if (max >= 2 * min)
+        } else if (max >= 2 * min) {
             //Second case: if max is bigger than min by mul 2, there are min options
             System.out.println(min);
-        else
+        } else {
             System.out.println((max + min) / 3);
-
+        }
     }
 }
