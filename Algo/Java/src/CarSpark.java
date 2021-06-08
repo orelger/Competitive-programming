@@ -1,8 +1,11 @@
 import java.util.*;
 
 /**
- * Author: Orel Gershonovich
- * Release: 19.3.21
+ * A solution for Car spark - Xtreme 9.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.hackerrank.com/">https://www.hackerrank.com/</a>
+ * @since:  19.3.21
  */
 
 public class CarSpark {
@@ -36,6 +39,7 @@ public class CarSpark {
             int[] p = buildPArray(marks);
 
             // Now compute optimum value
+            // M[j] = MAX(item_value + M[P[j]],M[j]
             int[] m = new int[marks.size() + 1];
             m[0] = 0;
             for (int k = 0; k < marks.size(); k++) {
@@ -89,7 +93,9 @@ public class CarSpark {
         }
     }
 
-
+    /**
+     * A private class that demonstrates a struct with three data member
+     */
     private static class Tuple {
         int startTime;
         int endTime;

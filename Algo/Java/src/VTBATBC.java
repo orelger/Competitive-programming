@@ -2,10 +2,12 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Author: Orel Gershonovich
- * Release: 10.4.21
+ * A solution for Vangelis the Batbear and the Bubbles challenge - Xtreme 11.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.csacademy.com/">https://www.csacademy.com/</a>
+ * @since: 10.4.21
  */
-
 public class VTBATBC {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -48,11 +50,13 @@ public class VTBATBC {
 
     }
 
+    /**
+     * A private class that demonstrates a connection between two nodes
+     */
     private static class EdgeConnection {
         int vertexA;
         int vertexB;
 
-        //Cons
         public EdgeConnection(int vertexA, int vertexB) {
             this.vertexA = Math.min(vertexA, vertexB);
             this.vertexB = Math.max(vertexA, vertexB);
@@ -98,7 +102,6 @@ public class VTBATBC {
         private int edges;
         private List<EdgeConnection> edgesList;
 
-        //Cons
         public Graph(int vertices, int edges) {
             this.vertices = vertices;
             this.edges = edges;
@@ -114,17 +117,15 @@ public class VTBATBC {
         }
 
         public void addEdgesList(List<EdgeConnection> l1) {
-            //edgesList = new ArrayList<>();
             edgesList = l1;
         }
 
         /**
          * Exists cycle in graph
-         * @return
          */
         public boolean hasCycle() {
             for (EdgeConnection edge : edgesList) {
-                if ((edge.getVertexA() == edge.getVertexB() /* inner loop */ ) ||
+                if ((edge.getVertexA() == edge.getVertexB() /* inner loop */) ||
                         /* any circle */ hasCycle(edge.getVertexA(), new HashSet<>(), edgesList))
                     return true;
             }
@@ -133,9 +134,10 @@ public class VTBATBC {
 
         /**
          * private function for recursive traversing in a graph
-         * @param vertex - local vertex
+         *
+         * @param vertex  - local vertex
          * @param visited - which vertices we have visited
-         * @param edges - every edges we have not visited
+         * @param edges   - every edges we have not visited
          * @return
          */
         private boolean hasCycle(int vertex, Set<Integer> visited, List<EdgeConnection> edges) {

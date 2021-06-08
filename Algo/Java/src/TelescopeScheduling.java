@@ -1,10 +1,12 @@
 import java.util.*;
 
 /**
- * Author: Orel Gershonovich
- * Release: 10.4.21
+ * A solution for Telescope scheduling - Xtreme 9.0
+ *
+ * @author: Orel Gershonovich
+ * @see: <a href="https://www.csacademy.com/">https://www.csacademy.com/</a>
+ * @since: 10.4.21
  */
-
 public class TelescopeScheduling {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -14,7 +16,6 @@ public class TelescopeScheduling {
         int startTime;
         int endTime;
         int desirabilityTime;
-
 
         for (int i = 0; i < starsAmount; i++) {
             //System.out.println("Give me the start time: ");
@@ -38,7 +39,8 @@ public class TelescopeScheduling {
         //Check start time > end time
         int[] p = buildPArray(starsList);
 
-        //Compute the sum of the desirability of the stars
+        // Now compute optimum value
+        // M[j] = MAX(item_value + M[P[j]],M[j]
         int[] m = new int[starsList.size() + 1];
         m[0] = 0;
         for (int k = 0; k < starsList.size(); k++) {
@@ -65,15 +67,16 @@ public class TelescopeScheduling {
 //        for (int i = 0; i < p.length; i++) {
 //            System.out.println(p[i]);
 //        }
-
         return p;
     }
 
+    /**
+     * A private class that demonstrates a struct with three data member
+     */
     private static class Tuple {
         int startTime;
         int endTime;
         int desirabilityTime;
-
 
         public Tuple(int startTime, int endTime, int desirabilityTime) {
             this.startTime = startTime;
